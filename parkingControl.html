@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			停车
+		</title>
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+				<a class="back-home-btn" href="index.html">
+			<img src="img/back_home.png"/>
+		</a>
+		<div class="mainParking clear">
+			<!-- 左侧 -->
+			<div class="main-left">
+				<div class="main-right-top">
+					<h1></h1>
+					<div class="main-right-top-con">
+						<div class="main-right-top-con-right clear">
+							<span><label>车位总数</label><b>252</b></span>
+							<span><label>已用车位</label><b>202</b></span>
+							<span><label>剩余车位</label><b>50</b></span>
+						</div>
+					</div>
+				</div>
+				<div class="main-right-bottom">
+					<h1>区域车位</h1>
+					<div>
+						<div id="chart10" style="width: 100%;height: 100%;">
+						</div>
+					</div>
+				</div>
+				<div class="main-right-center">
+					<h1>车位使用</h1>
+					<div>
+						<div id="chart3" style="width: 100%;height: 100%;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 中间 -->
+			<div class="main-center">
+				<div class="main-center-menu">
+				</div>
+			</div>
+			<!-- 右侧 -->
+            <div class="main-right">
+                <div class="main-right-top">
+                    <h1></h1>
+                </div>
+<!--                 <div class="main-right-center">
+                    <h1></h1>
+                </div> -->
+                <div class="main-right-bottom clear">
+	                <div class="">
+	                    <div>P1</div>
+	                    <div><div id="parking_right_chart1" style="width: 100%;height: 100%;"></div></div>
+	                </div>                
+	                <div class="">
+	                    <div>P2</div>
+	                    <div><div id="parking_right_chart2" style="width: 100%;height: 100%;"></div></div>
+	                </div>  
+	                <div class="">
+	                    <div>P3</div>
+	                    <div><div id="parking_right_chart3" style="width: 100%;height: 100%;"></div></div>
+	                </div> 
+	                <div class="">
+	                    <div>P4</div>
+	                    <div><div id="parking_right_chart4" style="width: 100%;height: 100%;"></div></div>
+	                </div> 	
+	                <div class="">
+	                    <div>P5</div>
+	                    <div><div id="parking_right_chart5" style="width: 100%;height: 100%;"></div></div>
+	                </div> 	
+	                <div class="">
+	                    <div>P6</div>
+	                    <div><div id="parking_right_chart6" style="width: 100%;height: 100%;"></div></div>
+	                </div> 
+	                <div class="">
+	                    <div>P7</div>
+	                    <div><div id="parking_right_chart7" style="width: 100%;height: 100%;"></div></div>
+	                </div> 
+	                <div class="">
+	                    <div>P8</div>
+	                    <div><div id="parking_right_chart8" style="width: 100%;height: 100%;"></div></div>
+	                </div> 	                	                	                	                	                	
+                </div>
+                 
+            </div>
+		</div>
+		<script charset="utf-8" src="js/jquery-1.10.2.min.js" type="text/javascript">
+		</script>
+		<script charset="utf-8" src="js/echarts3.min.js" type="text/javascript">
+		</script>
+		<script charset="utf-8" src="js/echarts-liquidfill.min.js" type="text/javascript">
+		</script>
+		<script charset="utf-8" src="js/parkingControl.js" type="text/javascript">
+		</script>
+		<script>
+			function sup(n) {
+				return(n < 10) ? '0' + n : n;
+			}
+		</script>
+		<script type="text/javascript">
+			function temperature(height_val) {
+				$("#chart9").css("height", height_val + "%");
+			}
+		</script>
+		<script type="text/javascript">
+         $(function() {
+			oneZheAreaColorChangeChart("parking_right_chart1",'rgba(110,111,156, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart2",'rgba(221,225,227, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart3",'rgba(235,215,78, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart4",'rgba(0,248,250, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart5",'rgba(110,50,5, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart6",'rgba(26,173,25, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart7",'rgba(208,18,18, 1)');
+			oneZheAreaColorChangeChart("parking_right_chart8",'rgba(208,18,199, 1)');
+         });
+        </script>   
+	</body>
+
+</html>
